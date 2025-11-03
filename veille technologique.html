@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veille Technologique - Les Agents IA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            text-align: center;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.2rem;
+        }
+
+        .last-update {
+            background: #3498db;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .veille-content {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            height: fit-content;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: #34495e;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        .definition-box {
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .trend-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .trend-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e9ecef;
+            transition: transform 0.3s ease;
+        }
+
+        .trend-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .trend-card h4 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .tech-list {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .tech-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .tech-list li:before {
+            content: "🤖 ";
+        }
+
+        .news-item {
+            background: white;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-date {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline {
+            margin: 2rem 0;
+        }
+
+        .timeline-item {
+            background: white;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #3498db;
+        }
+
+        .timeline-date {
+            font-weight: bold;
+            color: #3498db;
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            text-align: center;
+            border-radius: 20px;
+            margin-top: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .sources {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+
+        .ai-badge {
+            background: #e74c3c;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-left: 0.5rem;
+        }
+    </style>
+</head>
+<bo>
+    <div class="container">
+        <header>
+            <h1>🤖 Veille Technologique</h1>
+            <p class="subtitle">Les Agents IA : Révolution en Cours</p>
+            <div class="last-update">Dernière mise à jour : Décembre 2024</div>
+        </header>
+
+        <div class="main-content">
+            <div class="veille-content">
+                <section>
+                    <h2>📖 Définition et Contexte</h2>
+                    <div class="definition-box">
+                        <p>Un <strong>agent IA</strong> est un système autonome qui perçoit son environnement, prend des décisions et exécute des actions pour atteindre des objectifs spécifiques. Contrairement aux modèles de langage simples, les agents peuvent planifier, utiliser des outils et apprendre de leurs expériences.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>🚀 Tendances Actuelles</h2>
+                    <div class="trend-grid">
+                        <div class="trend-card">
+                            <h4>🧠 Agents Autonomes</h4>
+                            <p>Les agents capables de réaliser des tâches complexes de manière autonome, comme AutoGPT et BabyAGI, gagnent en popularité.</p>
+                        </div>
+                        <div class="trend-card">
+                            <h4>🔧 Multi-Spécialisation</h4>
+                            <p>Des agents spécialisés dans différents domaines (code, design, analyse) collaborant ensemble.</p>
+                        </div>
+                        <div class="trend-card">
+                            <h4>🌐 Interface Naturelle</h4>
+                            <p>Interaction vocale et gestuelle avec les agents, rendant l'IA plus accessible.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>💡 Technologies Émergentes</h2>
+                    <ul class="tech-list">
+                        <li><strong>GPT-4 Turbo</strong> - Contexte étendu à 128k tokens</li>
+                        <li><strong>Claude 3</strong> - Raisonnement avancé et traitement de documents</li>
+                        <li><strong>Gemini Ultra</strong> - Multimodalité native de Google</li>
+                        <li><strong>LangGraph</strong> - Création d'agents complexes</li>
+                        <li><strong>AutoGen</strong> - Framework Microsoft pour agents conversationnels</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>📰 Actualités Récentes</h2>
+                    <div class="news-item">
+                        <div class="news-date">Novembre 2024</div>
+                        <h4>OpenAI dévoile des agents capables de naviguer sur le web</h4>
+                        <p>Nouveaux agents autonomes pouvant effectuer des recherches et actions en ligne de manière sécurisée.</p>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-date">Octobre 2024</div>
+                        <h4>Google présente ses agents Gemini pour l'entreprise</h4>
+                        <p>Des agents spécialisés dans les tâches métier avec intégration GSuite.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>🕰️ Évolution Récente</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">2024</div>
+                            <p><strong>Agents Multimodaux</strong> - Capacité à traiter texte, image, audio simultanément</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2023</div>
+                            <p><strong>AutoGPT</strong> - Premier agent autonome grand public</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2022</div>
+                            <p><strong>ChatGPT</strong> - Popularisation des assistants IA conversationnels</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="sidebar">
+                <h2>📊 Chiffres Clés</h2>
+                <div class="trend-card">
+                    <h4>Marché des Agents IA</h4>
+                    <p><strong>+240%</strong> de croissance prévue d'ici 2025</p>
+                </div>
+                <div class="trend-card">
+                    <h4>Adoption Entreprise</h4>
+                    <p><strong>68%</strong> des grandes entreprises testent des agents IA</p>
+                </div>
+
+                <h2 style="margin-top: 2rem;">🔍 Sources de Veille</h2>
+                <ul class="tech-list">
+                    <li>arXiv.org</li>
+                    <li>OpenAI Blog</li>
+                    <li>Google AI Blog</li>
+                    <li>TechCrunch IA</li>
+                    <li>GitHub Trending</li>
+                </ul>
+
+                <h2 style="margin-top: 2rem;">⚠️ Défis à Relever</h2>
+                <ul class="tech-list">
+                    <li>Sécurité et contrôle</li>
+                    <li>Éthique et biais</li>
+                    <li>Coût computationnel</li>
+                    <li>Intégration legacy</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <p><strong>Veille technologique réalisée dans le cadre de mon BTS SIO</strong></p>
+            <p>Cette page est régulièrement mise à jour pour suivre l'évolution rapide des agents IA.</p>
+            <div class="sources">
+                Sources : OpenAI, Google AI, Microsoft Research, arXiv
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Mise à jour automatique de la date
+        document.addEventListener('DOMContentLoaded', function() {
+            const lastUpdate = document.querySelector('.last-update');
+            const now = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            lastUpdate.textContent = 'Dernière mise à jour : ' + now.toLocaleDateString('fr-FR', options);
+        });
+    </script>
+    </div>
+</body>
+</html>
