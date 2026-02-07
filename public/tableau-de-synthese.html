@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau de Synthèse - Gbaguidi Harvey</title>
+  
+  <link rel="shortcut icon" href="./img/favicon.ico?v=1" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: '#002e7a', secondary: '#ed719e', accent: '#10B981', dark: '#1F2937', light: '#F9FAFB' },
+          fontFamily: { 'poppins': ['Poppins', 'sans-serif'] },
+          animation: { 'fade-in': 'fadeIn 0.5s ease-in-out' },
+          keyframes: { fadeIn: { '0%': { opacity: '0', transform: 'translateY(10px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } } }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    /* Animation de zoom au survol de l'image */
+    .zoom-container:hover img { transform: scale(1.02); }
+  </style>
+</head>
+
+<body class="font-poppins bg-gray-50 text-gray-800">
+
+  <nav class="sticky top-0 z-40 bg-white shadow-sm py-4">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-3 text-primary font-bold hover:text-blue-800 transition group">
+            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+            <span>Retour à l'Accueil</span>
+        </a>
+        <span class="text-sm text-gray-500 hidden md:block">Portefeuille de Compétences E6</span>
+    </div>
+  </nav>
+
+  <section class="py-12 md:py-16">
+    <div class="container mx-auto px-4 max-w-6xl">
+      
+      <div class="text-center mb-10 animate-fade-in">
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Tableau de Synthèse</h1>
+        <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Récapitulatif des compétences validées et des situations professionnelles rencontrées au cours du BTS SIO (Option SLAM).
+        </p>
+      </div>
+
+      <div class="bg-white p-4 md:p-6 rounded-2xl shadow-xl border border-gray-200 animate-fade-in mb-16">
+        
+        <div class="zoom-container relative overflow-hidden rounded-lg border border-gray-100 group cursor-zoom-in" onclick="window.open(this.querySelector('img').src, '_blank');">
+            <img src="image/mon-tableau-e6.jpg" 
+                 alt="Tableau de synthèse E6 BTS SIO" 
+                 class="w-full h-auto object-contain transition duration-500 ease-in-out">
+            
+            <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                <span class="bg-white text-gray-800 px-4 py-2 rounded-full shadow-lg font-bold text-sm">
+                    <i class="fas fa-search-plus mr-2"></i> Agrandir
+                </span>
+            </div>
+        </div>
+
+        <div class="mt-6 text-center">
+            <a href="image/mon-tableau-e6.jpg" download="Tableau-Synthese-Harvey.jpg" 
+               class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-bold rounded-xl hover:bg-blue-800 transition shadow-lg hover:-translate-y-1">
+                <i class="fas fa-download"></i> Télécharger le document
+            </a>
+        </div>
+      </div>
+
+      <div class="animate-fade-in">
+          <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center flex items-center justify-center gap-3">
+              <i class="fas fa-tools text-primary"></i> Stack Technique & Outils
+          </h2>
+          
+          <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+              <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition text-center border border-gray-100 flex flex-col items-center justify-center h-32">
+                  <img src="assets/imgs/logiciel/c-sharp.webp" alt="C#" class="h-12 w-auto mb-3 object-contain">
+                  <span class="font-bold text-gray-700 text-sm">C#</span>
+              </div>
+              <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition text-center border border-gray-100 flex flex-col items-center justify-center h-32">
+                  <img src="assets/imgs/logiciel/Git.webp" alt="Git" class="h-12 w-auto mb-3 object-contain">
+                  <span class="font-bold text-gray-700 text-sm">Git</span>
+              </div>
+              <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition text-center border border-gray-100 flex flex-col items-center justify-center h-32">
+                  <img src="assets/imgs/logiciel/Github.webp" alt="GitHub" class="h-12 w-auto mb-3 object-contain">
+                  <span class="font-bold text-gray-700 text-sm">GitHub</span>
+              </div>
+              <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition text-center border border-gray-100 flex flex-col items-center justify-center h-32">
+                  <img src="assets/imgs/logiciel/vscode.webp" alt="VS Code" class="h-12 w-auto mb-3 object-contain">
+                  <span class="font-bold text-gray-700 text-sm">VS Code</span>
+              </div>
+              <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition text-center border border-gray-100 flex flex-col items-center justify-center h-32">
+                  <img src="assets/imgs/logiciel/xampp.webp" alt="XAMPP" class="h-12 w-auto mb-3 object-contain">
+                  <span class="font-bold text-gray-700 text-sm">XAMPP</span>
+              </div>
+              <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition text-center border border-gray-100 flex flex-col items-center justify-center h-32">
+                  <img src="assets/imgs/logiciel/Notion.webp" alt="Notion" class="h-12 w-auto mb-3 object-contain">
+                  <span class="font-bold text-gray-700 text-sm">Notion</span>
+              </div>
+              <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition text-center border border-gray-100 flex flex-col items-center justify-center h-32">
+                  <img src="assets/imgs/logiciel/virtualbox.webp" alt="VirtualBox" class="h-12 w-auto mb-3 object-contain">
+                  <span class="font-bold text-gray-700 text-sm">VirtualBox</span>
+              </div>
+              <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition text-center border border-gray-100 flex flex-col items-center justify-center h-32">
+                  <img src="assets/imgs/logiciel/unity.webp" alt="Unity" class="h-12 w-auto mb-3 object-contain">
+                  <span class="font-bold text-gray-700 text-sm">Unity</span>
+              </div>
+              <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition text-center border border-gray-100 flex flex-col items-center justify-center h-32">
+                  <img src="assets/imgs/logiciel/wireshark.webp" alt="Wireshark" class="h-12 w-auto mb-3 object-contain">
+                  <span class="font-bold text-gray-700 text-sm">Wireshark</span>
+              </div>
+              <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition text-center border border-gray-100 flex flex-col items-center justify-center h-32">
+                  <img src="assets/imgs/logiciel/proxmox.webp" alt="Proxmox" class="h-12 w-auto mb-3 object-contain">
+                  <span class="font-bold text-gray-700 text-sm">Proxmox</span>
+              </div>
+          </div>
+      </div>
+
+    </div>
+  </section>
+<footer class="bg-dark text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+        <div>
+          <div class="text-2xl font-bold mb-2">
+            <span class="text-white">Gbaguidi</span> <span class="text-accent">Harvey</span>
+          </div>
+          <p class="text-gray-400">Étudiant en BTS SIO SLAM - Développeur Web</p>
+        </div>
+        
+        <div class="flex space-x-6">
+          <a href="https://github.com/HarveyGbb/site-restaurant-dragon-s-wok" target="_blank" 
+             class="text-gray-400 hover:text-white transition p-2 hover:bg-white/10 rounded-full">
+            <i class="fab fa-github text-xl"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/harvey-gbaguidi-116164356" target="_blank" 
+             class="text-gray-400 hover:text-white transition p-2 hover:bg-white/10 rounded-full">
+            <i class="fab fa-linkedin-in text-xl"></i>
+          </a>
+          <a href="https://www.instagram.com/harvey_gb" target="_blank" 
+             class="text-gray-400 hover:text-white transition p-2 hover:bg-white/10 rounded-full">
+            <i class="fab fa-instagram text-xl"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+        <p>© 2025 Gbaguidi Harvey. Tous droits réservés.</p>
+        <p class="text-sm mt-2">Développé avec passion et détermination</p>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+</html>

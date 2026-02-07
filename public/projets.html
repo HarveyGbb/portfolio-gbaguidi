@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes Projets - Gbaguidi Harvey</title>
+  
+  <link rel="shortcut icon" href="./img/favicon.ico?v=1" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#002e7a',
+            secondary: '#ed719e',
+            accent: '#10B981',
+            dark: '#1F2937',
+            light: '#F9FAFB',
+          },
+          fontFamily: {
+            'poppins': ['Poppins', 'sans-serif'],
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.5s ease-in-out',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0', transform: 'translateY(10px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    /* Styles spécifiques pour les modales */
+    .modal-overlay { backdrop-filter: blur(5px); }
+    .modal-content { animation: fadeIn 0.3s ease-out; }
+    /* Scrollbar personnalisée */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f1f1; }
+    ::-webkit-scrollbar-thumb { background: #888; border-radius: 10px; }
+    ::-webkit-scrollbar-thumb:hover { background: #555; }
+  </style>
+</head>
+
+<body class="font-poppins bg-gray-50 text-gray-800">
+
+  <nav class="sticky top-0 z-40 bg-white shadow-sm py-4">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-2 text-primary font-bold hover:text-blue-800 transition group">
+            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+            <span>Retour au Portfolio</span>
+        </a>
+        
+        <div class="hidden md:block text-gray-500 text-sm">
+            Découvrez l'ensemble de mes réalisations
+        </div>
+    </div>
+  </nav>
+
+  <section id="projets" class="py-12 md:py-16">
+    <div class="container mx-auto px-4">
+      
+      <div class="text-center mb-12 animate-fade-in">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Mes Projets</h1>
+        <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Retrouvez ci-dessous les projets réalisés durant ma formation et mes expériences. 
+            Développement web, applications mobiles et intégrations.
+        </p>
+      </div>
+  
+      <div class="flex flex-wrap justify-center gap-3 mb-12 animate-fade-in">
+        <button class="px-5 py-2.5 bg-primary text-white rounded-lg font-medium transition-all duration-300 hover:bg-blue-800 active-filter shadow-md" data-filter="all">
+          Tous les projets
+        </button>
+        <button class="px-5 py-2.5 bg-white text-gray-700 border border-gray-200 rounded-lg font-medium transition-all duration-300 hover:bg-gray-50 hover:border-primary hover:text-primary" data-filter="web">
+          Développement web
+        </button>
+        <button class="px-5 py-2.5 bg-white text-gray-700 border border-gray-200 rounded-lg font-medium transition-all duration-300 hover:bg-gray-50 hover:border-primary hover:text-primary" data-filter="app">
+          Applications
+        </button>
+      </div>
+  
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-16" id="projects-grid">
+        
+        <div class="project-item animate-fade-in" data-category="web">
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 h-full flex flex-col">
+            <div class="h-56 overflow-hidden relative">
+              <img src="https://picsum.photos/600/400?random=1" alt="Site restaurant Dragon'wok" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60"></div>
+              <div class="absolute top-4 right-4">
+                <span class="px-3 py-1.5 bg-primary text-white text-xs font-semibold rounded-full shadow-sm">Web</span>
+              </div>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Site restaurant Dragon D'or</h3>
+              <p class="text-gray-600 mb-4 text-sm leading-relaxed flex-grow">
+                Site de commande en ligne type "Click & Collect" permettant aux clients de composer leur menu et récupérer sur place.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                <span class="px-2.5 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded">HTML5</span>
+                <span class="px-2.5 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded">CSS3</span>
+                <span class="px-2.5 py-1 bg-yellow-100 text-yellow-800 text-xs font-medium rounded">JS</span>
+                <span class="px-2.5 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded">PHP</span>
+              </div>
+              <button onclick="openProjectModal('modal-1')" class="w-full py-3 bg-gradient-to-r from-primary to-blue-800 text-white font-semibold rounded-lg hover:from-blue-800 hover:to-blue-900 transition-all duration-300 flex items-center justify-center gap-2 group">
+                <span>Voir les détails</span>
+                <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+  
+        <div class="project-item animate-fade-in" data-category="app">
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 h-full flex flex-col">
+            <div class="h-56 overflow-hidden relative">
+              <img src="https://picsum.photos/600/400?random=2" alt="Application Mobile" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60"></div>
+              <div class="absolute top-4 right-4">
+                <span class="px-3 py-1.5 bg-green-600 text-white text-xs font-semibold rounded-full shadow-sm">App</span>
+              </div>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Application Mobile</h3>
+              <p class="text-gray-600 mb-4 text-sm leading-relaxed flex-grow">
+                Application mobile de gestion de tâches et projets.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                <span class="px-2.5 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded">React Native</span>
+                <span class="px-2.5 py-1 bg-green-100 text-green-800 text-xs font-medium rounded">Firebase</span>
+                <span class="px-2.5 py-1 bg-red-100 text-red-800 text-xs font-medium rounded">Node.js</span>
+              </div>
+              <button onclick="openProjectModal('modal-2')" class="w-full py-3 bg-gradient-to-r from-primary to-blue-800 text-white font-semibold rounded-lg hover:from-blue-800 hover:to-blue-900 transition-all duration-300 flex items-center justify-center gap-2 group">
+                <span>Voir les détails</span>
+                <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+  
+        <div class="project-item animate-fade-in" data-category="web">
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 h-full flex flex-col">
+            <div class="h-56 overflow-hidden relative">
+              <img src="https://picsum.photos/600/400?random=3" alt="Site E-commerce" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60"></div>
+              <div class="absolute top-4 right-4">
+                <span class="px-3 py-1.5 bg-primary text-white text-xs font-semibold rounded-full shadow-sm">Web</span>
+              </div>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Landing Page</h3>
+              <p class="text-gray-600 mb-4 text-sm leading-relaxed flex-grow">
+                Intégration d'une page de destination pour un client professionnel.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                <span class="px-2.5 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded">HTML5</span>
+                <span class="px-2.5 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded">Tailwind</span>
+                <span class="px-2.5 py-1 bg-yellow-100 text-yellow-800 text-xs font-medium rounded">JS</span>
+              </div>
+              <button onclick="openProjectModal('modal-3')" class="w-full py-3 bg-gradient-to-r from-primary to-blue-800 text-white font-semibold rounded-lg hover:from-blue-800 hover:to-blue-900 transition-all duration-300 flex items-center justify-center gap-2 group">
+                <span>Voir les détails</span>
+                <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+
+  <div id="modal-1" class="modal-overlay fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black bg-opacity-70">
+    <div class="modal-content bg-white rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-hidden shadow-2xl relative">
+      <div class="bg-gradient-to-r from-primary to-blue-800 text-white p-6">
+        <div class="flex justify-between items-center">
+          <h3 class="text-2xl font-bold">Boutique en ligne</h3>
+          <button onclick="closeProjectModal('modal-1')" class="text-white hover:text-gray-200 text-3xl leading-none transition focus:outline-none">&times;</button>
+        </div>
+        <div class="flex items-center gap-4 mt-3">
+          <span class="flex items-center gap-2 text-blue-100 bg-white/10 px-3 py-1 rounded-full text-sm"><i class="far fa-calendar"></i> 2025/2026</span>
+          <span class="flex items-center gap-2 text-blue-100 bg-white/10 px-3 py-1 rounded-full text-sm"><i class="fas fa-tag"></i> Développement Web</span>
+        </div>
+      </div>
+      
+      <div class="p-8 overflow-y-auto max-h-[calc(90vh-140px)]">
+        <div class="grid lg:grid-cols-2 gap-8">
+          <div class="space-y-4">
+            <img src="https://picsum.photos/600/400?random=4" alt="Capture" class="w-full rounded-xl shadow-md border border-gray-200">
+            <img src="https://picsum.photos/600/400?random=5" alt="Capture" class="w-full rounded-xl shadow-md border border-gray-200">
+          </div>
+          <div class="space-y-6">
+            <div>
+              <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2"><i class="fas fa-info-circle text-primary"></i> Informations du projet</h4>
+              <p class="text-gray-700 leading-relaxed">Avec un collaborateur, nous avons réalisé le développement d'une plateforme web complète de commande en ligne type "Click & Collect" pour un restaurant. Le système permet aux clients de composer leur menu en ligne.</p>
+            </div>
+            <div>
+              <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2"><i class="fas fa-tasks text-primary"></i> Fonctionnalités</h4>
+              <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                <li>Système de commande complet</li>
+                <li>Gestion des disponibilités</li>
+                <li>Interface administrateur</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2"><i class="fas fa-code text-primary"></i> Technologies</h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium">HTML5/CSS3</span>
+                <span class="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium">PHP/MySQL</span>
+                <span class="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium">JavaScript</span>
+              </div>
+            </div>
+            <div class="pt-4 mt-auto">
+               <button onclick="closeProjectModal('modal-1')" class="w-full py-3 bg-gray-100 text-gray-700 font-bold rounded-lg hover:bg-gray-200 transition">Fermer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-2" class="modal-overlay fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black bg-opacity-70">
+    <div class="modal-content bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden shadow-2xl relative">
+      <div class="modal-header bg-gradient-to-r from-green-600 to-green-700 text-white p-6">
+        <div class="flex justify-between items-center">
+          <h3 class="text-2xl font-bold">Application Mobile</h3>
+          <button onclick="closeProjectModal('modal-2')" class="text-white hover:text-gray-200 text-3xl leading-none transition">&times;</button>
+        </div>
+      </div>
+      <div class="p-8 overflow-y-auto max-h-[calc(90vh-100px)]">
+         <div class="grid md:grid-cols-2 gap-8">
+            <img src="https://picsum.photos/600/800?random=6" class="w-full rounded-xl shadow-md">
+            <div>
+                <h4 class="text-xl font-bold mb-3">Description</h4>
+                <p class="text-gray-700 mb-4">Application mobile de gestion de tâches et projets.</p>
+                <h4 class="text-xl font-bold mb-3">Stack Technique</h4>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">React Native</span>
+                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Node.js</span>
+                </div>
+                <button onclick="closeProjectModal('modal-2')" class="w-full py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">Fermer</button>
+            </div>
+         </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-3" class="modal-overlay fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black bg-opacity-70">
+    <div class="modal-content bg-white rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-hidden shadow-2xl relative">
+      <div class="modal-header bg-gradient-to-r from-primary to-blue-800 text-white p-6">
+        <div class="flex justify-between items-center">
+          <h3 class="text-2xl font-bold">Landing Page Pro</h3>
+          <button onclick="closeProjectModal('modal-3')" class="text-white hover:text-gray-200 text-3xl leading-none transition">&times;</button>
+        </div>
+      </div>
+      <div class="p-8 overflow-y-auto max-h-[calc(90vh-100px)]">
+        <p class="text-gray-700 leading-relaxed mb-6">Dans le cadre de mon stage, j'ai assisté mon tuteur dans la mise à jour d'une landing page destinée à la clientèle professionnelle d’un de nos client. Ma mission a consisté à renforcer la cohérence entre le site institutionnel et ce site dédié aux professionnels.</p>
+        <button onclick="closeProjectModal('modal-3')" class="px-6 py-2 bg-primary text-white rounded-lg hover:bg-blue-800 transition">Fermer la fenêtre</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+        <div>
+          <div class="text-2xl font-bold mb-2">
+            <span class="text-white">Gbaguidi</span> <span class="text-accent">Harvey</span>
+          </div>
+          <p class="text-gray-400">Étudiant en BTS SIO SLAM - Développeur Web</p>
+        </div>
+        
+        <div class="flex space-x-6">
+          <a href="https://github.com/HarveyGbb/site-restaurant-dragon-s-wok" target="_blank" 
+             class="text-gray-400 hover:text-white transition p-2 hover:bg-white/10 rounded-full">
+            <i class="fab fa-github text-xl"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/harvey-gbaguidi-116164356" target="_blank" 
+             class="text-gray-400 hover:text-white transition p-2 hover:bg-white/10 rounded-full">
+            <i class="fab fa-linkedin-in text-xl"></i>
+          </a>
+          <a href="https://www.instagram.com/harvey_gb" target="_blank" 
+             class="text-gray-400 hover:text-white transition p-2 hover:bg-white/10 rounded-full">
+            <i class="fab fa-instagram text-xl"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+        <p>© 2025 Gbaguidi Harvey. Tous droits réservés.</p>
+        <p class="text-sm mt-2">Développé avec passion et détermination</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    // Filtres
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterButtons = document.querySelectorAll('[data-filter]');
+      const projectItems = document.querySelectorAll('.project-item');
+      
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          // Reset styles
+          filterButtons.forEach(btn => {
+            btn.classList.remove('bg-primary', 'text-white');
+            btn.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-200');
+          });
+          // Active style
+          this.classList.remove('bg-white', 'text-gray-700', 'border', 'border-gray-200');
+          this.classList.add('bg-primary', 'text-white');
+          
+          const filterValue = this.getAttribute('data-filter');
+          
+          projectItems.forEach(item => {
+            if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+              item.style.display = 'block';
+              item.style.animation = 'fadeIn 0.5s ease-in-out';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+
+    // Modales
+    function openProjectModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeProjectModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    // Fermeture externe et escape
+    document.addEventListener('click', (e) => {
+        if (e.target.classList.contains('modal-overlay')) closeProjectModal(e.target.id);
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') document.querySelectorAll('.modal-overlay').forEach(m => closeProjectModal(m.id));
+    });
+  </script>
+
+</body>
+</html>
