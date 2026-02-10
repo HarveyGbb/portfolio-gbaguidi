@@ -46,7 +46,7 @@
             <h1 class="text-4xl font-bold text-gray-900 mb-4">Veille Technologique</h1>
             <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
             <p class="text-lg text-gray-600">
-                Focus sur l'automatisation des workflows et l'interconnexion d'API (Make / No-Code).
+                Mon sujet d'étude : <strong>L'automatisation des flux de données (Workflows) et l'intégration d'API.</strong>
             </p>
         </header>
 
@@ -56,59 +56,60 @@
                 <div class="flex flex-col md:flex-row items-start justify-between mb-6">
                     <h2 class="text-2xl font-bold text-gray-900 flex items-center gap-3">
                         <span class="w-10 h-10 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center"><i class="fas fa-bolt"></i></span>
-                        Automatisation No-Code : Make
+                        Pourquoi Make (No-Code) ?
                     </h2>
                     <span class="mt-2 md:mt-0 bg-purple-100 text-purple-800 px-4 py-1 rounded-full text-sm font-semibold">
-                        Workflow & API
+                        Sujet Principal
                     </span>
                 </div>
                 
                 <p class="text-gray-700 mb-6 leading-relaxed">
-                    Make (ex-Integromat) s'impose comme le leader de l'automatisation visuelle complexe. Contrairement à des outils plus linéaires, il permet de créer des scénarios avancés, de connecter des API REST/SOAP et de manipuler des structures de données JSON sans avoir besoin de développer un backend complet.
+                    Dans le cadre de ma veille, je me suis intéressé aux solutions permettant de connecter différentes applications entre elles sans avoir à développer des scripts backend complexes. 
+                    J'ai choisi d'approfondir <strong>Make</strong> (anciennement Integromat) car, contrairement à ses concurrents, il offre une interface visuelle qui permet de gérer des logiques de programmation avancées (boucles, conditions, transformation de JSON) directement dans le navigateur.
                 </p>
                 
                 <div class="grid md:grid-cols-2 gap-6 mb-6">
                     <div class="border border-gray-200 rounded-xl p-5 bg-gray-50 hover:shadow-md transition">
-                        <h3 class="font-bold text-primary mb-3 flex items-center gap-2"><i class="fas fa-cogs"></i> Fonctionnalités Clés</h3>
+                        <h3 class="font-bold text-primary mb-3 flex items-center gap-2"><i class="fas fa-cogs"></i> Ce que j'analyse</h3>
                         <ul class="space-y-3">
                             <li class="flex items-start">
                                 <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
                                 <div>
-                                    <strong>Logique Non-linéaire</strong>
-                                    <p class="text-sm text-gray-600">Utilisation de routeurs, filtres et itérateurs.</p>
+                                    <strong>La logique conditionnelle</strong>
+                                    <p class="text-sm text-gray-600">Utilisation des "Routers" pour créer des scénarios qui s'adaptent aux données reçues.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
                                 <div>
-                                    <strong>Webhooks & HTTP</strong>
-                                    <p class="text-sm text-gray-600">Déclenchement instantané via réception de données.</p>
+                                    <strong>Webhooks & API</strong>
+                                    <p class="text-sm text-gray-600">Comment recevoir une donnée en temps réel (POST request) et la traiter.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
                                 <div>
-                                    <strong>Data Stores</strong>
-                                    <p class="text-sm text-gray-600">Base de données interne pour stocker des états.</p>
+                                    <strong>Manipulation de données</strong>
+                                    <p class="text-sm text-gray-600">Parser du JSON et transformer des tableaux (Arrays) sans code.</p>
                                 </div>
                             </li>
                         </ul>
                     </div>
                     
                     <div class="border border-gray-200 rounded-xl p-5 bg-gray-50 hover:shadow-md transition">
-                        <h3 class="font-bold text-primary mb-3 flex items-center gap-2"><i class="fas fa-laptop-code"></i> Cas d'usage étudiés</h3>
+                        <h3 class="font-bold text-primary mb-3 flex items-center gap-2"><i class="fas fa-laptop-code"></i> Mes observations</h3>
                         <ul class="space-y-3">
                             <li class="flex items-center">
                                 <i class="fas fa-arrow-right text-purple-600 mr-2"></i>
-                                <span>Synchronisation CRM <-> E-mailing</span>
+                                <span>Gain de temps considérable sur le prototypage.</span>
                             </li>
                             <li class="flex items-center">
                                 <i class="fas fa-arrow-right text-purple-600 mr-2"></i>
-                                <span>Traitement automatique de factures</span>
+                                <span>Nécessite quand même de comprendre la structure HTTP/REST.</span>
                             </li>
                             <li class="flex items-center">
                                 <i class="fas fa-arrow-right text-purple-600 mr-2"></i>
-                                <span>Connexion OpenAI pour analyse de contenu</span>
+                                <span>Intéressant pour connecter des outils modernes (Notion, Airtable, Gmail).</span>
                             </li>
                         </ul>
                     </div>
@@ -116,7 +117,7 @@
                 
                 <div class="bg-blue-50 p-4 rounded-lg text-sm text-blue-800 flex items-center gap-3">
                     <i class="fas fa-info-circle text-xl"></i>
-                    <strong>Focus technique actuel :</strong> Gestion des erreurs (Error Handlers) et transactions ACID pour garantir l'intégrité des données.
+                    <strong>Point de vigilance :</strong> La gestion des erreurs. Si une API ne répond pas, il faut prévoir un module "Error Handler" pour ne pas bloquer tout le processus.
                 </div>
             </div>
 
@@ -124,7 +125,7 @@
                 <div class="flex items-start justify-between mb-6">
                     <h2 class="text-2xl font-bold text-gray-900 flex items-center gap-3">
                         <span class="w-10 h-10 bg-gray-100 text-gray-600 rounded-full flex items-center justify-center"><i class="fas fa-table"></i></span>
-                        Comparatif des méthodes
+                        Mon comparatif
                     </h2>
                 </div>
                 
@@ -132,10 +133,10 @@
                     <table class="min-w-full divide-y divide-gray-200 border border-gray-200 rounded-lg">
                         <thead class="bg-gray-50">
                             <tr>
-                                <th class="px-6 py-4 text-left text-sm font-bold text-gray-700 uppercase tracking-wider">Outil</th>
-                                <th class="px-6 py-4 text-left text-sm font-bold text-gray-700 uppercase tracking-wider">Complexité</th>
-                                <th class="px-6 py-4 text-left text-sm font-bold text-gray-700 uppercase tracking-wider">Flexibilité</th>
-                                <th class="px-6 py-4 text-left text-sm font-bold text-gray-700 uppercase tracking-wider">Usage Idéal</th>
+                                <th class="px-6 py-4 text-left text-sm font-bold text-gray-700 uppercase tracking-wider">Solution</th>
+                                <th class="px-6 py-4 text-left text-sm font-bold text-gray-700 uppercase tracking-wider">Accessibilité</th>
+                                <th class="px-6 py-4 text-left text-sm font-bold text-gray-700 uppercase tracking-wider">Puissance</th>
+                                <th class="px-6 py-4 text-left text-sm font-bold text-gray-700 uppercase tracking-wider">Mon avis</th>
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200">
@@ -148,8 +149,8 @@
                                         Moyenne
                                     </span>
                                 </td>
-                                <td class="px-6 py-4 text-sm text-gray-600">Très Élevée (API)</td>
-                                <td class="px-6 py-4 text-sm text-gray-600">Workflows complexes, manipulation de données</td>
+                                <td class="px-6 py-4 text-sm text-gray-600">Très Élevée</td>
+                                <td class="px-6 py-4 text-sm text-gray-600">Le meilleur compromis pour des logiques complexes.</td>
                             </tr>
                             <tr class="bg-gray-50">
                                 <td class="px-6 py-4 whitespace-nowrap">
@@ -157,23 +158,23 @@
                                 </td>
                                 <td class="px-6 py-4">
                                     <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                                        Faible
+                                        Facile
                                     </span>
                                 </td>
                                 <td class="px-6 py-4 text-sm text-gray-600">Moyenne</td>
-                                <td class="px-6 py-4 text-sm text-gray-600">Tâches linéaires simples (A vers B)</td>
+                                <td class="px-6 py-4 text-sm text-gray-600">Bien pour des tâches simples (A vers B), mais vite limité.</td>
                             </tr>
                             <tr>
                                 <td class="px-6 py-4 whitespace-nowrap">
-                                    <span class="text-blue-700 font-bold"><i class="fas fa-code mr-2"></i>Scripts (Code)</span>
+                                    <span class="text-blue-700 font-bold"><i class="fas fa-code mr-2"></i>Script (Python/JS)</span>
                                 </td>
                                 <td class="px-6 py-4">
                                     <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
-                                        Élevée
+                                        Difficile
                                     </span>
                                 </td>
                                 <td class="px-6 py-4 text-sm text-gray-600">Illimitée</td>
-                                <td class="px-6 py-4 text-sm text-gray-600">Traitement massif, logique sur-mesure</td>
+                                <td class="px-6 py-4 text-sm text-gray-600">Indispensable pour des traitements très lourds ou spécifiques.</td>
                             </tr>
                         </tbody>
                     </table>
@@ -181,28 +182,44 @@
             </div>
 
             <div class="bg-gray-100 p-8 rounded-2xl">
-                <h2 class="text-xl font-bold text-gray-800 mb-6 text-center">Mes sources d'information</h2>
+                <h2 class="text-xl font-bold text-gray-800 mb-6 text-center">Mes sources de veille</h2>
                 <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                    
                     <div class="text-center p-6 bg-white rounded-xl shadow-sm hover:-translate-y-1 transition duration-300">
                         <div class="text-4xl text-purple-600 mb-3">
-                            <i class="fas fa-rss"></i>
+                            <i class="fas fa-users"></i>
                         </div>
-                        <h3 class="font-bold mb-3 text-lg">Communauté & News</h3>
+                        <h3 class="font-bold mb-3 text-lg">Communautés & Forums</h3>
                         <ul class="text-sm text-gray-600 space-y-2">
-                            <li><a href="#" class="hover:text-purple-600 hover:underline">Make Community Forum</a></li>
-                            <li><a href="#" class="hover:text-purple-600 hover:underline">Newsletter "Automators"</a></li>
-                            <li><a href="#" class="hover:text-purple-600 hover:underline">NoCode France (Discord)</a></li>
+                            <li>
+                                <a href="https://community.make.com/" target="_blank" class="hover:text-purple-600 hover:underline flex items-center justify-center gap-2">
+                                    <i class="fas fa-external-link-alt text-xs"></i> Make Community (Officiel)
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.nocode-france.fr/" target="_blank" class="hover:text-purple-600 hover:underline flex items-center justify-center gap-2">
+                                    <i class="fas fa-external-link-alt text-xs"></i> NoCode France (Discord/Slack)
+                                </a>
+                            </li>
                         </ul>
                     </div>
+
                     <div class="text-center p-6 bg-white rounded-xl shadow-sm hover:-translate-y-1 transition duration-300">
                         <div class="text-4xl text-green-600 mb-3">
-                            <i class="fas fa-book-reader"></i>
+                            <i class="fas fa-book"></i>
                         </div>
                         <h3 class="font-bold mb-3 text-lg">Documentation Technique</h3>
                         <ul class="text-sm text-gray-600 space-y-2">
-                            <li><a href="#" class="hover:text-green-600 hover:underline">API Documentation (REST)</a></li>
-                            <li><a href="#" class="hover:text-green-600 hover:underline">Documentation n8n (Alternative)</a></li>
-                            <li><a href="#" class="hover:text-green-600 hover:underline">JSON Data Structures</a></li>
+                            <li>
+                                <a href="https://www.make.com/en/help/home" target="_blank" class="hover:text-green-600 hover:underline flex items-center justify-center gap-2">
+                                    <i class="fas fa-external-link-alt text-xs"></i> Documentation Make
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://developer.mozilla.org/fr/docs/Web/HTTP/Methods" target="_blank" class="hover:text-green-600 hover:underline flex items-center justify-center gap-2">
+                                    <i class="fas fa-external-link-alt text-xs"></i> MDN Web Docs (HTTP/REST)
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -221,7 +238,7 @@
         </div>
         
         <div class="flex space-x-6">
-          <a href="https://github.com/HarveyGbb/site-restaurant-dragon-s-wok" target="_blank" 
+          <a href="https://github.com/HarveyGbb" target="_blank" 
              class="text-gray-400 hover:text-white transition p-2 hover:bg-white/10 rounded-full">
             <i class="fab fa-github text-xl"></i>
           </a>
@@ -242,7 +259,6 @@
       </div>
     </div>
   </footer>
-
 
 </body>
 </html>
